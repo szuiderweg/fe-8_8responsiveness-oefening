@@ -11,10 +11,22 @@ Table of Contents:
 /*////////////////////////
     1. Global Styles
 ////////////////////////*/
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;}
 
-body {
-    font-family: 'Dosis', sans-serif;
-    font-weight: 400;
+html {
+    font-size: 12px;
+}
+
+
+
+:root{/* CSS HEX colors*/
+    --peach: #f9c48bff;
+    --tangerine: #f69051ff;
+    --sienna: #f26d40ff;
+    --black-bean: #260803ff;
+    --shell: #fdefecff;
 }
 
 /*////////////////////////
@@ -27,9 +39,50 @@ body {
     3. Areas
 ////////////////////////*/
 
+body {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    background-color: var(--peach);
+    display: flex;
+    flex-direction: row;
+}
 
+main {
+    display: flex;
+    flex-direction: column;
+}
 
+section {
+    background-color: var(--shell);
+
+    border-radius: 0.8em;
+    padding: 1rem;
+    margin: 1rem;
+
+}
+
+img {width: 100%;}
 
 /*////////////////////////
     2. Media Queries
 ////////////////////////*/
+@media screen and (min-width: 576px){
+    html{
+        font-size: 1.1rem;
+    }
+
+    body{
+        background-color: var(--tangerine);
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    html{
+        font-size: 1.3rem;
+    }
+
+    body{
+        background-color: var(--sienna);
+    }
+}
